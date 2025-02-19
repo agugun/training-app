@@ -16,6 +16,7 @@ import { AddProductfbComponent } from './add-productfb/add-productfb.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { CardContentComponent } from './card-content/card-content.component';
 import { BoldTextDirective } from './directive/bold-text.directive';
+import { ObsComponent } from './obs/obs.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BoldTextDirective } from './directive/bold-text.directive';
     AddProductfbComponent,
     AddCategoryComponent,
     CardContentComponent,
-    BoldTextDirective
+    BoldTextDirective,
+    ObsComponent
   ],
   imports: [
     BrowserModule,

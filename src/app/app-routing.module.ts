@@ -6,6 +6,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { AddProductfbComponent } from './add-productfb/add-productfb.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { ObsComponent } from './obs/obs.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'newcategory', 
     component: AddCategoryComponent
+  }, 
+  {
+    path: 'obs', 
+    component: ObsComponent
   }, 
   {
     path: "**", 
