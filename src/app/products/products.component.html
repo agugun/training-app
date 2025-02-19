@@ -1,0 +1,28 @@
+<!-- <br>
+<div class="container">
+    New Product Price {{productPrice}}
+    <div class="mb-3 row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Price</label>
+        <div class="col-sm-4">
+          <input type="number" class="form-control" [(ngModel)]="productPrice">
+        </div>
+    </div>
+  </div>
+
+<button type="button" class="btn btn-primary" (click)="newProduct()">New Product</button>
+<button type="button" class="btn btn-primary" (click)="showProducts('')">Refresh</button>
+
+  Number of Products : {{noOfProducts}} -->
+
+  <div class="row">
+    <div *ngFor="let prod of prod_list" class="col-4">
+      <div *ngIf="!(prod == 'Orange' && skip_orange)">
+          <app-card-content>
+            <img [src]="prod.product_url" class="card-pic card-img-top" alt="{{ prod.product_name }}">
+            <h5 class="card-title" [appBoldText]>({{prod.product_id}}) {{prod.product_name | uppercase}}</h5>
+            <p class="card-text" >{{prod.product_desc}}</p>
+            <p class="card-price" >Price : {{prod.product_price}} QAR</p>
+          </app-card-content>
+      </div>
+    </div>
+  </div>

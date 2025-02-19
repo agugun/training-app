@@ -1,0 +1,17 @@
+<form #categoryForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row mb-3">
+      <label for="categoryName" class="col-sm-2 col-form-label">Category Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="categoryName" [(ngModel)]="categoryName" name="categoryName" #catname="ngModel" required>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="categoryDescription" class="col-sm-2 col-form-label">Category Description</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="categoryDescription" [(ngModel)]="categoryDesc" name="categoryDesc" #catdesc="ngModel" required>
+        <div [hidden]="catdesc.valid || catdesc.pristine" class="alert bg-danger">Mandatory</div>
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="!categoryForm.form.valid">Submit</button>
+  </form>
